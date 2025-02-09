@@ -1,5 +1,7 @@
 ---
 import '../styles/global.css';
+import Navbar from '../components/shared/Navbar.astro';
+import Footer from '../components/shared/Footer.astro';
 interface Props {
 	title: string;
 }
@@ -17,8 +19,12 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
-		<slot />
+	<body class="custom-scrollbar">
+		<Navbar />
+		<main>
+			<slot />
+		</main>
+		<Footer />
 	</body>
 </html>
 

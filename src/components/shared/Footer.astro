@@ -1,0 +1,45 @@
+---
+import { footerData } from "../../lib/data";
+import  SocialIcons  from "../SocialIcons";
+import { FaPhone, FaLocationArrow } from "react-icons/fa";
+import { IoMailOutline } from "react-icons/io5";
+---
+
+<footer class=" bg-white text-gray-800 pt-20 py-8 px-6">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 xl:flex gap-10">
+    <!-- About the Company -->
+    <div>
+      <h2 class="font-semibold text-lg mb-3">{footerData.aboutCompany.title}</h2>
+      <p class="text-sm leading-relaxed">{footerData.aboutCompany.description}</p>
+      <SocialIcons client:load />
+    </div>
+
+    <!-- Dynamic Sections -->
+    {footerData.sections.map((section) => (
+      <div class="text-nowrap">
+        <h2 class="font-semibold text-lg mb-3">{section.title}</h2>
+        <ul class="space-y-2 text-sm">
+          {section.links.map((link) => (
+            <li><a href="#" class="hover:underline">{link}</a></li>
+          ))}
+        </ul>
+      </div>
+    ))}
+
+    <!-- Contact Info -->
+    <div class="px-6 text-nowrap">
+      <div class="flex items-center space-x-2">
+        <FaPhone className="text-green-600 text-xl" />
+        <span class=" text-lg">{footerData.contact.phone}</span>
+      </div>
+      <div class="flex items-center space-x-2">
+        <IoMailOutline className="text-green-600 text-xl" />
+        <span class="text-lg">{footerData.contact.email}</span>
+      </div>
+      <div class="flex items-center space-x-2">
+        <FaLocationArrow className="text-green-600 text-xl" />
+        <span class="text-lg">{footerData.contact.address}</span>
+      </div>
+    </div>
+  </div>
+</footer>
