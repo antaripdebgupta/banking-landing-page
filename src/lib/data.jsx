@@ -33,6 +33,12 @@ export const socialIcons = {
   },
 };
 
+export const heroData = {
+  title: 'Chase Your Dream with us',
+  description:
+    'Experience banking that empowers your dreams—secure, seamless, and built for you.',
+};
+
 export const footerData = {
   aboutCompany: {
     title: 'About the Company',

@@ -1,0 +1,44 @@
+---
+import SocialIcons from "../components/SocialIcons";
+import { heroData, footerData } from "../lib/data"
+import { FaCar, FaHome, FaPhone } from "react-icons/fa";
+---
+<section class="flex flex-col lg:flex-row items-start sm:items-center md:px-40 pt-16 sm:pt-28 font-sans min-h-screen justify-between bg-white p-6 sm:p-8 gap-5 sm:gap-10 lg:gap-0">
+    <!-- Left Side -->
+    <div class="lg:w-1/2 w-full text-left md:text-center lg:text-left flex flex-col gap-1">
+      <h1 class="text-4xl md:text-6xl font-bold text-black xl:w-[27rem]">{heroData.title}</h1>
+      <p class="text-gray-600 text-sm md:text-base xl:w-[27rem]">{heroData.description}</p>
+      <div class="mt-6 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+        <button
+          class="bg-green-700 text-white px-4 py-2 md:px-6 md:py-3 rounded-lg font-semibold transition-all duration-200 ease-in-out hover:bg-green-800 hover:scale-105"
+        >
+          APPLY ONLINE
+        </button>
+        <button
+          class="border border-green-700 text-green-700 px-4 py-2 md:px-6 md:py-3 rounded-lg font-semibold transition-all duration-200 ease-in-out hover:bg-green-700 hover:text-white hover:scale-105"
+        >
+            LOAN CALCULATOR
+        </button>
+      </div>
+      <div class="hidden sm:flex mt-10 md:mt-32 gap-12 justify-center lg:justify-start">
+        <div class="flex items-center space-x-2 border-r-2 pr-8">
+          <FaPhone className="text-green-600 text-xl" />
+          <span class="text-lg">{footerData.contact.phone}</span>
+        </div>
+        <SocialIcons />
+      </div>
+    </div>
+  
+    <!-- Right Side -->
+    <div class="lg:w-1/2 w-full flex flex-col items-center relative mt-4 sm:mt-0">
+      <img src="/assets/hero-image.png" alt="Happy Family" class="w-full" />
+      <div class="absolute top-4 left-4 sm:top-8 sm:left-8 bg-white shadow-md rounded-full px-3 sm:px-4 py-1 sm:py-2 flex items-center gap-2 text-lg sm:text-xl hover:cursor-pointer">
+        <FaCar className="text-green-700" />
+        <span>Car Loans</span>
+      </div>
+      <div class="absolute mb-20 sm:mb-72 bottom-4 right-4 sm:bottom-8 sm:right-8 bg-white shadow-md rounded-full px-3 sm:px-4 py-1 sm:py-2 flex items-center gap-2 text-lg sm:text-xl hover:cursor-pointer">
+        <FaHome className="text-green-700" />
+        <span>Home Loan</span>
+      </div>
+    </div>
+</section> 
