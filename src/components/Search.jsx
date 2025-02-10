@@ -14,7 +14,7 @@ export default function SearchComponent() {
         <input
           type="text"
           placeholder="Search for services..."
-          className="min-w-44 px-3 py-2 border-b-2 border-gray-300 focus:outline-none w-full transition-all duration-300 ease-in-out focus:border-green-300 focus:scale-105 focus:shadow-lg"
+          className="sm:min-w-44 px-3 py-2 border-b-2 border-gray-300 focus:outline-none w-full transition-all duration-300 ease-in-out focus:border-green-300 focus:scale-105 focus:shadow-lg"
         />
       </div>
       <button

@@ -2,16 +2,16 @@
 import SearchComponent from '../Search';
 import MoreServicesButton from '../MoreServicesButton.jsx';
 import { links } from '../../lib/data';
-
+import Sidebar from '../Sidebar'
 ---
 
 <div class="blur-overlay fixed top-0 left-0 w-full h-[70px] z-20 pointer-events-none"></div>
 
 <nav class="flex w-full items-center justify-between py-4 px-5 md:px-40 fixed top-0 z-30 bg-white">
-  <a href="/" class="flex items-center min-w-28">
+  <a href="/" class="flex items-center min-w-20 sm:min-w-28">
     <img src="/assets/icon.svg" alt="Logo" class="h-10 w-fit mr-2" />
   </a>
-
+  
   <div class="hidden md:flex items-center space-x-6 flex-grow justify-center">
     <MoreServicesButton client:load links={links} />
   </div>
@@ -20,6 +20,9 @@ import { links } from '../../lib/data';
     <SearchComponent client:load />
     <button class="hidden md:block h-10 px-4 bg-green-700 text-white rounded-lg font-semibold hover:bg-green-800 transition duration-300">
       iSERVICE
-    </button>    
+    </button>
+    <div class="pl-4">
+      <Sidebar client:load />
+    </div> 
   </div>
 </nav>
