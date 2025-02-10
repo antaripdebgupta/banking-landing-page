@@ -5,7 +5,7 @@ import { FaPhone, FaLocationArrow } from "react-icons/fa";
 import { IoMailOutline } from "react-icons/io5";
 ---
 
-<footer class=" bg-white text-gray-800 pt-20 py-8 px-6">
+<footer class="bg-white text-gray-800 pt-20 py-8 px-6">
   <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 xl:flex gap-10">
     <!-- About the Company -->
     <div>
@@ -28,18 +28,69 @@ import { IoMailOutline } from "react-icons/io5";
 
     <!-- Contact Info -->
     <div class="px-6 text-nowrap">
-      <div class="flex items-center space-x-2">
+      <div 
+        class="flex items-center space-x-2 copyable-contact cursor-pointer hover:text-green-600 transition-colors"
+        data-copy-value={footerData.contact.phone}
+      >
         <FaPhone className="text-green-600 text-xl" />
-        <span class=" text-lg">{footerData.contact.phone}</span>
+        <span class="text-lg">{footerData.contact.phone}</span>
       </div>
-      <div class="flex items-center space-x-2">
+      <div 
+        class="flex items-center space-x-2 copyable-contact cursor-pointer hover:text-green-600 transition-colors"
+        data-copy-value={footerData.contact.email}
+      >
         <IoMailOutline className="text-green-600 text-xl" />
         <span class="text-lg">{footerData.contact.email}</span>
       </div>
-      <div class="flex items-center space-x-2">
+      <div 
+        class="flex items-center space-x-2 copyable-contact cursor-pointer hover:text-green-600 transition-colors"
+        data-copy-value={footerData.contact.address}
+      >
         <FaLocationArrow className="text-green-600 text-xl" />
         <span class="text-lg">{footerData.contact.address}</span>
       </div>
     </div>
   </div>
+
+  <script>
+    // Function: show toast notification
+    function showToast(message: string) {
+      const toast = document.createElement("div");
+      toast.textContent = message;
+      toast.style.position = "fixed";
+      toast.style.top = "20px";
+      toast.style.right = "20px";
+      toast.style.backgroundColor = "#4CAF50";
+      toast.style.color = "white";
+      toast.style.padding = "10px 20px";
+      toast.style.borderRadius = "5px";
+      toast.style.boxShadow = "0 2px 5px rgba(0,0,0,0.2)";
+      toast.style.zIndex = "1000";
+      toast.style.fontSize = "14px";
+      toast.style.opacity = "1";
+      toast.style.transition = "opacity 0.5s ease-in-out";
+  
+      document.body.appendChild(toast);
+  
+      setTimeout(() => {
+        toast.style.opacity = "0";
+        setTimeout(() => document.body.removeChild(toast), 500);
+      }, 2000);
+    }
+  
+    document.querySelectorAll('.copyable-contact').forEach(element => {
+      const el = element as HTMLElement;
+      el.addEventListener('click', async () => {
+        const value = el.dataset.copyValue;
+        if (!value) return;
+        try {
+          await navigator.clipboard.writeText(value);
+          showToast(`Copied to clipboard: ${value}`);
+        } catch (err) {
+          console.error('Failed to copy:', err);
+        }
+      });
+    });
+  </script>
+
 </footer>
