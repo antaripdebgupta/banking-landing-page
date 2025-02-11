@@ -1,0 +1,20 @@
+---
+import { featuresData, images } from '../lib/data'
+const { title, subtitle } = featuresData;
+import HoverEffect from '../components/HoverEffect' 
+import AutoPlayCarousel from '../components/AutoPlayCarousel';
+
+---
+
+<section class="py-16 bg-white text-center">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold text-gray-900">{title}</h2>
+    <p class="mt-4 text-gray-600 px-4">{subtitle}</p>
+  </div>
+  <div class="container mx-auto">
+    <HoverEffect items={featuresData.features} client:load />
+  </div>
+  <div class="mt-2 md:mt-10 xl:mt-16 px-4 md:px-40">
+    <AutoPlayCarousel client:load images={images}/>
+  </div>
+</section>

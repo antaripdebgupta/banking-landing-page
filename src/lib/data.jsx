@@ -39,6 +39,70 @@ export const heroData = {
     'Experience banking that empowers your dreams—secure, seamless, and built for you.',
 };
 
+export const featuresData = {
+  title: 'Creating Extraordinary Customer Experience',
+  subtitle:
+    'We strive to create exceptional experiences that connect and inspire our customers every day',
+  features: [
+    {
+      title: 'Integrity',
+      description:
+        'Upholding honesty and transparency in every aspect of our business.',
+      icon: '🛡️',
+    },
+    {
+      title: 'Demonstrate',
+      description:
+        'Striving for excellence and a strong will to lead in the marketplace.',
+      icon: '🎯',
+    },
+    {
+      title: 'Diversity',
+      description:
+        'Fostering an inclusive environment that values diverse perspectives.',
+      icon: '🌍',
+    },
+    {
+      title: 'Teamwork',
+      description: 'Collaborating effectively to drive collective success.',
+      icon: '🤝',
+    },
+    {
+      title: 'Collaboration',
+      description: 'Building strong partnerships to achieve shared goals.',
+      icon: '🔗',
+    },
+    {
+      title: 'Technology',
+      description: 'Leveraging innovation to enhance customer experiences.',
+      icon: '💡',
+    },
+    {
+      title: 'Corporate',
+      description:
+        'Committed to responsible corporate practices and community engagement.',
+      icon: '🏢',
+    },
+    {
+      title: 'Digital',
+      description:
+        'Embracing digital transformation to provide seamless banking solutions.',
+      icon: '📱',
+    },
+  ],
+};
+
+export const images = [
+  '/assets/exp.png',
+  '/assets/exp.png',
+  '/assets/exp.png',
+  '/assets/exp.png',
+  '/assets/exp.png',
+  '/assets/exp.png',
+  '/assets/exp.png',
+  '/assets/exp.png',
+];
+
 export const footerData = {
   aboutCompany: {
     title: 'About the Company',
