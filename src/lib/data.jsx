@@ -103,6 +103,30 @@ export const images = [
   '/assets/exp.png',
 ];
 
+export const serviceData = {
+  title: 'Our Services',
+  description:
+    'Explore our comprehensive banking services, including Retail Banking, SME Solutions, Corporate Banking, Loans, Mobile Banking, and Secure Payments, tailored to fit your financial needs.',
+  services: [
+    {
+      title: 'FBC SAVING SCHEMES',
+      image: '/assets/service1.webp',
+    },
+    {
+      title: 'FBC PERSONAL LOAN',
+      image: '/assets/service2.webp',
+    },
+    {
+      title: 'FBC DEPOSIT SCHEMES',
+      image: '/assets/service3.webp',
+    },
+    {
+      title: 'FBC AUTO LOAN',
+      image: '/assets/service4.webp',
+    },
+  ],
+};
+
 export const footerData = {
   aboutCompany: {
     title: 'About the Company',

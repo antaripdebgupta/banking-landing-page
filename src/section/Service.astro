@@ -1,0 +1,30 @@
+---
+import { FaArrowRight } from "react-icons/fa";
+import { serviceData } from "../lib/data"
+const { title, description, services} = serviceData
+---
+
+<section class="flex flex-col items-center justify-center min-h-screen px-6 sm:px-8 pt-16 sm:pt-28 font-sans text-center">
+  <div class="p-6 rounded-lg w-full max-w-6xl">
+    <div class="pb-6 md:pb-8 xl:pb-10">
+      <h2 class="text-3xl xl:text-4xl font-bold text-gray-900">{title}</h2>
+      <p class="text-md sm:text-lg text-gray-500 max-w-xl mx-auto mt-2 xl:mt-4">{description}</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 xl:gap-10 mt-8">
+      {services.map((service) => (
+        <div class="group bg-white shadow-lg rounded-xl overflow-hidden transform hover:scale-105 transition duration-300">
+          <img src={service.image} alt={service.title} class="w-full rounded-lg h-52 sm:h-60 md:h-72 lg:h-82 xl:h-96 object-cover" />
+          <div class="p-4 flex flex-row">
+            <h3 class="text-lg xl:text-2xl xl:min-w-24 text-start font-semibold text-gray-800">
+              {service.title} 
+            </h3>
+            <a href="https://www.google.com/" rel="preload">
+             <FaArrowRight className="text-green-700 text-2xl transition-transform group-hover:translate-x-1 duration-200" />
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
