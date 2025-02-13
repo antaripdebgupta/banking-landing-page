@@ -1,0 +1,43 @@
+---
+import { newsLetterData, resultData } from "../lib/data";
+const { title, description, results } = resultData;
+---
+<section class="min-h-screen flex flex-col">
+    <div class="pt-48 text-center px-6 sm:px-8">
+      <h2 class="text-2xl md:text-3xl xl:text-4xl font-bold text-gray-900">{title}</h2>
+      <p class="text-md sm:text-lg text-gray-500 max-w-xl mx-auto mt-2">
+        {description}
+      </p>
+  
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-8">
+        {results.map((item) => (
+          <div class="text-center">
+            <span class={`text-2xl font-bold ${item.highlight ? 'text-green-700' : 'text-gray-900'}`}>
+              {item.value}
+            </span>
+            <p class="text-gray-500 text-sm">{item.label}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  
+    <!-- Newsletter Section at the Bottom -->
+    <div class="bg-green-50 text-center py-10 md:py-20 xl:py-24 flex flex-col items-center justify-center mt-auto gap-4">
+        <h2 class="text-2xl px-6 md:text-3xl xl:text-4xl font-bold text-gray-900">{newsLetterData.title}</h2>
+        <p class="text-gray-500 max-w-md text-md sm:text-lg mx-auto mt-2">
+          {newsLetterData.description}
+        </p>
+        <form class="flex items-center justify-center mt-6 gap-2 w-full max-w-xs sm:max-w-md">
+          <input 
+            type="email" 
+            placeholder="Your email" 
+            class="p-3 border border-gray-300 rounded-l-lg w-full focus:outline-none"
+          />
+          <button aria-label="subscribe" class="bg-green-700 uppercase text-white px-4 py-3 rounded-r-lg hover:bg-green-600 transition">
+            SUBSCRIBE
+          </button>
+        </form>
+        
+    </div>      
+</section>
+  
