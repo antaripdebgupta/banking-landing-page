@@ -7,7 +7,7 @@ import { FaCar, FaHome, FaPhone } from "react-icons/fa";
     <!-- Left Side -->
     <div class="lg:w-1/2 w-full text-left md:text-center lg:text-left flex flex-col gap-1">
       <h1 class="text-4xl md:text-6xl font-bold text-black xl:w-[27rem]">{heroData.title}</h1>
-      <p class="text-gray-600 text-sm md:text-base xl:w-[27rem]">{heroData.description}</p>
+      <p class="text-gray-600 text-md sm:text-lg xl:w-[27rem]">{heroData.description}</p>
       <div class="mt-6 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
         <button
           class="bg-green-700 text-white px-4 py-2 md:px-6 md:py-3 rounded-lg font-semibold transition-all duration-200 ease-in-out hover:bg-green-800 hover:scale-105"
@@ -25,18 +25,18 @@ import { FaCar, FaHome, FaPhone } from "react-icons/fa";
           <FaPhone className="text-green-600 text-xl" />
           <span class="text-lg">{footerData.contact.phone}</span>
         </div>
-        <SocialIcons />
+        <SocialIcons client:load />
       </div>
     </div>
   
     <!-- Right Side -->
-    <div class="lg:w-1/2 w-full flex flex-col items-center relative mt-4 sm:mt-0">
+    <div class="flex-1 sm:flex-0 w-full flex flex-col items-center justify-center relative mt-2 sm:mt-0">
       <img src="/assets/hero-image.png" alt="Happy Family" class="w-full" />
-      <div class="absolute top-4 left-4 sm:top-8 sm:left-8 bg-white shadow-md rounded-full px-3 sm:px-4 py-1 sm:py-2 flex items-center gap-2 text-lg sm:text-xl hover:cursor-pointer">
+      <div class="absolute top-40 left-8 sm:top-8 sm:left-8 bg-white shadow-md rounded-full px-3 sm:px-4 py-1 sm:py-2 flex items-center gap-2 text-base md:text-lg xl:text-xl hover:cursor-pointer">
         <FaCar className="text-green-700" />
         <span>Car Loans</span>
       </div>
-      <div class="absolute mb-20 sm:mb-72 bottom-4 right-4 sm:bottom-8 sm:right-8 bg-white shadow-md rounded-full px-3 sm:px-4 py-1 sm:py-2 flex items-center gap-2 text-lg sm:text-xl hover:cursor-pointer">
+      <div class="absolute mb-40 sm:mb-72 bottom-4 right-2 sm:bottom-8 sm:right-8 bg-white shadow-md rounded-full px-3 sm:px-4 py-1 sm:py-2 flex items-center gap-2 text-base md:text-lg xl:text-xl hover:cursor-pointer">
         <FaHome className="text-green-700" />
         <span>Home Loan</span>
       </div>
