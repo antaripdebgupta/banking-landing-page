@@ -2,7 +2,7 @@
 import SearchComponent from '../Search';
 import MoreServicesButton from '../MoreServicesButton.jsx';
 import { links } from '../../lib/data';
-import Sidebar from '../Sidebar'
+import Sidebar from './Sidebar.jsx'
 ---
 
 <div class="blur-overlay fixed top-0 left-0 w-full h-[70px] z-20 pointer-events-none"></div>
@@ -18,7 +18,7 @@ import Sidebar from '../Sidebar'
 
   <div class="flex items-center space-x-4">
     <SearchComponent client:load />
-    <button class="hidden md:block h-10 px-4 bg-green-700 text-white rounded-lg font-semibold hover:bg-green-800 transition duration-300">
+    <button class="hidden md:block h-10 px-4 bg-green-700 text-white rounded-lg font-semibold hover:bg-green-800 transition duration-300" aria-label="iservice" >
       iSERVICE
     </button>
     <div class="pl-4">

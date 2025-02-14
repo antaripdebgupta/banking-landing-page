@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { FiMenu, FiX } from 'react-icons/fi'; // Importing icons
-import { links } from '../lib/data';
+import { FiMenu, FiX } from 'react-icons/fi';
+import { links } from '../../lib/data';
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);

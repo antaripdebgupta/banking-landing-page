@@ -20,6 +20,7 @@ export default function SearchComponent() {
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="p-2 rounded-full transition"
+        aria-label="search"
       >
         <FaSearch className="text-green-700 text-2xl" />
       </button>

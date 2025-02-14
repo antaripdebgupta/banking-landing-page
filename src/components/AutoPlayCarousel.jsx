@@ -75,6 +75,7 @@ const AutoPlayCarousel = ({ images }) => {
                 currentIndex === index ? 'bg-green-500' : 'bg-gray-300'
               }`}
               onClick={() => setCurrentIndex(index)}
+              aria-label="play"
             />
           )
         )}
