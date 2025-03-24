@@ -13,7 +13,7 @@ const { title, description, services} = serviceData
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 xl:gap-10 mt-8">
       {services.map((service) => (
-        <div class="group bg-white shadow-lg rounded-xl overflow-hidden transform hover:scale-105 transition duration-300">
+        <div class="group bg-white shadow-lg cursor-pointer rounded-xl overflow-hidden transform hover:scale-105 transition duration-300">
           <img src={service.image} alt={service.title} class="w-full rounded-lg h-52 sm:h-60 md:h-72 lg:h-82 xl:h-96 object-cover" />
           <div class="p-4 flex flex-row">
             <h3 class="text-lg xl:text-2xl xl:min-w-24 text-start font-semibold text-gray-800">

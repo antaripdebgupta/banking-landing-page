@@ -1,6 +1,7 @@
 # 🌟 Banking Website Landing Page  
 
 🚀 A modern and responsive **banking website landing page** built using **Astro, React, and Framer Motion** to deliver a smooth, animated, and user-friendly experience.  
+![landingpage](https://github.com/user-attachments/assets/ae73b1c0-f475-4dd4-8288-f7a0ffe6877e)
 
 ## 🏗️ Tech Stack  
 - **Astro** - For blazing-fast static site generation  
