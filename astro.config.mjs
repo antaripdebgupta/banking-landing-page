@@ -9,4 +9,5 @@ export default defineConfig({
     enabled: false
   },
   integrations: [react(), tailwindcss()],
+  output: "static",
 });
